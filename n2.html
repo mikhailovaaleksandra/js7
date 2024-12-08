@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g</title>
+</head>
+<body>
+    <h1>Напишите функцию, которая сообщит сколько дней осталось до нового года.</h1>
+</body>
+<script>
+  function countDaysForNY(data) {
+let NY = new Date(data.getFullYear()+1,0,1);
+return Math.floor((NY-data)/(1000*60*60*24));
+}
+let data = new Date();
+console.log(countDaysForNY(data));
+</script>
+</html>

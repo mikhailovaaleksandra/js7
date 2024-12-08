@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g</title>
+</head>
+<body>
+    <h1>Написать скрипт, который при загрузке по разному в зависимости от времени суток приветствует пользователя (например, "доброе утро", "добрый день" или "добрый вечер"). Время, в которое следует говорить то или иное приветствие, выберите сами. </h1>
+</body>
+<script>
+    function getGreeting() {
+        const hour = new Date().getHours(); 
+    
+        if (hour >= 7 && hour < 12) {
+            return "Доброе утро,вставаай!";
+        } else if (hour >= 12 && hour < 16) {
+            return "Добрый день,хорошей работы!";
+        } else if (hour >= 16 && hour < 22) {
+            return "Добрый вечер,приятного завершения дня!";
+        } else {
+            return "Доброй ночи,спи сладко!";
+        }
+    }
+    
+        alert(getGreeting());
+    </script>
+</html>

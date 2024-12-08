@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g</title>
+</head>
+<body>
+    <h1>Напишите функцию, которая параметром будет принимать милисекунды, а возвращать количество дней, часов, минут и секунд, соответствующих этим секундам, в виде следующего объекта:
+      {
+        d: 12,
+        h: 10,
+        m: 59,
+        s: 59,
+      }
+      </h1>
+</body>
+<script>
+  function getTimeOfMS(milsec) 
+  {
+      return{
+        d:milsec/(1000*60*60*24),
+        h:milsec/(1000*60*60),
+        m:milsec/(1000*60),
+        s:milsec/1000,
+      }
+  }
+  console.log(getTimeOfMS(1234567800009));
+</script>
+</html>

@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g</title>
+</head>
+<body>
+    <h1>Напишите функцию, которая параметром будет получать дату, а возвращать день недели словом, соответствующий этой дате.</h1>
+</body>
+<script>
+  function getDayOfWeek(date) {
+let days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+return days[date.getDay()];
+}
+let today = new Date();
+console.log(getDayOfWeek(today));
+</script>
+</html>
+

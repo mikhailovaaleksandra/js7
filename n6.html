@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g</title>
+</head>
+<body>
+    <h1>Заполнить массив датами все пятниц, на которые выпадает 13-е число в текущем году.</h1>
+</body>
+<script>
+    function getBlackFridays(){
+    let dataa=new Date();
+    let arr=new Array()
+    for (let i=0; i<12; i++)
+    {
+        dataa.setDate(13);
+        dataa.setMonth(i);
+        console.log(dataa.getDay());
+        if (dataa.getDay()==5) arr.push(dataa.toString());
+    }
+
+    return arr;
+}
+
+console.log(getBlackFridays())
+</script>
+</html>
+

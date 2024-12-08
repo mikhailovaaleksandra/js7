@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>g</title>
+</head>
+<body>
+    <h1>Напишите функцию, которая вернет предыдущий, текущий и следующий дни недели словом в виде следующего объекта:
+        {
+            next: 'пн',
+            curr: 'вс',
+            prev: 'сб',
+        }
+        </h1>
+</body>
+<script>
+    function getObjectMyDays() 
+    {
+    let days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+let data = new Date();
+let today = data.getDay();
+let next;
+if (today == 6) {
+    next = 0; 
+} else {
+    next = today + 1;
+}
+let prev;
+if (today == 0) {
+    prev = 6; 
+} else {
+    prev = today - 1;
+}
+return {
+    next: days[next],
+    curr: days[today],
+    prev: days[prev]
+};
+}
+console.log(getObjectMyDays());
+</script>
+</html>
